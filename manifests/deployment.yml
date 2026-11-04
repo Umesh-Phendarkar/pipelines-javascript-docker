@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: umeshphendarkarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: umeshphendarkarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: umeshphendarkarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: umeshphendarkarpipelinesjavascriptdocker 
+          image: umeshmycontainerregistry100.azurecr.io/umeshphendarkarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
